@@ -13,6 +13,24 @@ maxRedigit(123);
 // Map Array Data
 
 // Alternate Case
+function alternateCase(text){
+  let string = text.split("");
+  let newArray = [];
+  for(let a = 0; a < string.length; a++){
+    let char = string[a];
+    if(char === char.toUpperCase()){
+       char = char.toLowerCase();
+       newArray.push(char);
+    }else{
+       char = char.toUpperCase();
+       newArray.push(char);
+    }
+  }
+  return newArray.join("");
+}
+alternateCase("abc");
+alternateCase("ABC");
+alternateCase("Hello World");
 
 // Multiple 3 and 5
 function solution(num){
