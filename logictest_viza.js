@@ -24,5 +24,25 @@ function reverseWords(text){
   return reverseArr.join(" ");
 }
 
-reverseWords("i am a great human")
+reverseWords("i am a great human");
+
 // Find Middle Alphabet
+function getMiddle(a, b) {
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let letter1 = alphabet.indexOf(a);
+  let letter2 = alphabet.indexOf(b);
+  let middle = (letter1 + letter2) / 2;
+  let letterLength;
+
+  if (middle % 2 == 0.5) {
+      letterLength = 2;
+  } else {
+      letterLength = 1;
+  }
+
+  return alphabet.substring(middle, middle + letterLength);
+}
+
+getMiddle("Q", "U");
+getMiddle("R", "U");
+getMiddle("T", "Z");
