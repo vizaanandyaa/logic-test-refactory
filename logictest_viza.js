@@ -15,6 +15,19 @@ maxRedigit(123);
 // Alternate Case
 
 // Multiple 3 and 5
+function solution(num){
+  let sum = 0;
+  let getNumber;
+  for(getNumber= 1; getNumber < num; getNumber++){
+    if(getNumber % 3 === 0 || getNumber % 5 === 0){
+      sum += getNumber;
+    }
+  }
+  return sum;
+}
+
+solution(10);
+solution(20);
 
 // Nearest Fibonacci
 
@@ -27,10 +40,10 @@ function reverseWords(text){
 reverseWords("i am a great human");
 
 // Find Middle Alphabet
-function getMiddle(a, b) {
+function getMiddle(c, d) {
   let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let letter1 = alphabet.indexOf(a);
-  let letter2 = alphabet.indexOf(b);
+  let letter1 = alphabet.indexOf(c);
+  let letter2 = alphabet.indexOf(d);
   let middle = (letter1 + letter2) / 2;
   let letterLength;
 
