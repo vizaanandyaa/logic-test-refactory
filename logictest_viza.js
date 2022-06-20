@@ -30,6 +30,32 @@ solution(10);
 solution(20);
 
 // Nearest Fibonacci
+let arr = [15,1,3];
+let sum = 0;
+for(let a = 0; a < arr.length; a++){
+  sum += arr[a];
+}
+
+const fibonacci = ()=>{
+  let result = [];
+  let fn = 1;
+  let fn_1 = 1;
+  let fn_2 = 0;
+  
+  for(let i = 0; i < 10; i++){
+    result.push(fn);
+    fn = fn_1 + fn_2;
+    fn_2 = fn_1;
+    fn_1 = fn
+  }
+  
+  const closest = result.reduce((a,b)=>{
+    return Math.abs(b - sum) < Math.abs(a - sum) ? b : a;
+});
+  let gap = closest - sum;
+  return gap;
+}
+console.log(fibonacci());
 
 // Reverse Words
 function reverseWords(text){
